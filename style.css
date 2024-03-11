@@ -37,6 +37,7 @@ Large: 1.8
 
 html {
   font-family: Roboto, sans-serif;
+  color: #666669;
 }
 
 .material-symbols-outlined {
@@ -81,12 +82,19 @@ html {
   margin-top: 12px;
 }
 
+/* MAIN SCREEN */
+.main-screen {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 14px;
+  background-color: #f0f3ff;
+}
+
 /* PROJECTS */
 .projects {
-  background-color: #f0f3ff;
   padding: 14px;
   display: grid;
-  grid-template-columns: repeat(2, clamp(170px, 50%, 270px));
+  grid-template-columns: repeat(2, minmax(170px, 1fr));
   gap: 16px;
 }
 
@@ -94,9 +102,10 @@ html {
   grid-column: 1 / -1;
   font-weight: 700;
   font-size: 14px;
+  color: #000;
 }
 
-.project {
+.card {
   font-size: 12px;
   background-color: #fff;
   padding: 12px 12px 24px;
@@ -106,7 +115,9 @@ html {
 }
 
 .project h2 {
+  margin-bottom: 4px;
   font-size: 12px;
+  color: #000;
 }
 
 .project p {
@@ -130,6 +141,30 @@ html {
   margin-top: 22px;
   display: flex;
   gap: 15px;
-  padding: 0;
   justify-content: flex-end;
+}
+
+/* Anuncios */
+.announcements {
+  padding: 12px;
+}
+
+.announcement {
+  margin-top: 16px;
+  padding: 12px 32px;
+}
+
+.announcement h2 {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #000;
+}
+
+.announcement p {
+  margin-bottom: 12px;
+}
+
+hr {
+  border: 1.2px solid #a6a3b9;
+  margin-bottom: 12px;
 }
