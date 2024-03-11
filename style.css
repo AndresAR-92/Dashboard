@@ -49,6 +49,7 @@ html {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  height: 100vh;
 }
 
 .grid-container > nav {
@@ -88,21 +89,24 @@ html {
   grid-template-columns: 2fr 1fr;
   padding: 14px;
   background-color: #f0f3ff;
+  gap: 12px;
 }
 
 /* PROJECTS */
 .projects {
-  padding: 14px;
+  padding: 12px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(170px, 1fr));
+  grid-template-columns: repeat(2, minmax(205px, 1fr));
   gap: 16px;
 }
 
 .projects-title {
-  grid-column: 1 / -1;
+  grid-column: 1;
+  margin-left: 12px;
   font-weight: 700;
   font-size: 14px;
   color: #000;
+  align-self: flex-end;
 }
 
 .card {
@@ -145,13 +149,26 @@ html {
 }
 
 /* Anuncios */
-.announcements {
+.announcements-trending {
   padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(205px, 1fr));
+  grid-template-rows: 1fr 1fr;
+}
+
+.announcements {
+  grid-row: 1;
+  display: contents;
 }
 
 .announcement {
-  margin-top: 16px;
   padding: 12px 32px;
+}
+
+.announcement-title {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: flex-end;
 }
 
 .announcement h2 {
@@ -167,4 +184,24 @@ html {
 hr {
   border: 1.2px solid #a6a3b9;
   margin-bottom: 12px;
+}
+
+/* TRENDING */
+
+.trending {
+  align-self: flex-end;
+}
+
+.profile-picture {
+  width: 30px;
+}
+
+.trending-title {
+  margin-bottom: 16px;
+}
+
+.trending-el {
+  margin: 16px 0;
+  display: flex;
+  gap: 16px;
 }
