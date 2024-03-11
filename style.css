@@ -81,7 +81,7 @@ html {
   font-size: 12px;
   background-color: #fff;
   padding: 12px 12px 24px;
-  border: 1px solid #e0e0e0;
+  box-shadow: 3px 3px 5px 0.2px #1313131a;
   border-radius: 6px;
   position: relative;
 }
