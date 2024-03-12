@@ -43,12 +43,12 @@ html {
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
   font-size: 20px;
-  color: #a6a3b9;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 130px 1fr;
   height: 100vh;
 }
 
@@ -57,11 +57,91 @@ html {
   background-color: #211951;
   color: #fff;
   padding: 16px;
+  z-index: 2;
 }
+
+/* HEADER */
 
 .grid-container > header {
   grid-column: 2;
   background-color: #836fff;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  color: #fff;
+  padding: 8px;
+  gap: 16px;
+  box-shadow: 0 3px 5px 0.2px #1313133f;
+  z-index: 1;
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 70px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+}
+
+header > label {
+  justify-self: flex-end;
+}
+
+header input {
+  width: 90%;
+  border-radius: 6px;
+  border: none;
+  height: 22px;
+  background-color: #f0f3ff;
+}
+
+.greeting {
+  margin-left: 70px;
+  display: grid;
+  justify-self: flex-start;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 6px;
+}
+
+.greeting > img {
+  grid-row: 1 / -1;
+}
+
+.hello {
+  font-size: 12px;
+  align-self: center;
+}
+
+.profile-picture-bg {
+  width: 40px;
+}
+
+.greeting > p {
+  grid-row: 2;
+  grid-column: 2;
+  font-weight: 500;
+}
+
+.buttons {
+  justify-self: center;
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  background-color: #211951;
+  padding: 8px 22px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500;
+  border: none;
 }
 
 /* SIDEBAR */
@@ -87,6 +167,7 @@ html {
 .main-screen {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: 20px 1fr;
   padding: 14px;
   background-color: #f0f3ff;
   gap: 12px;
@@ -194,10 +275,14 @@ hr {
 
 .profile-picture {
   width: 30px;
+  border-radius: 200px;
 }
 
 .trending-title {
   margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
 }
 
 .trending-el {
