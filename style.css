@@ -161,6 +161,19 @@ header input {
   align-items: center;
   gap: 16px;
   margin-top: 12px;
+  margin-left: 16px;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.dashboard > svg {
+  width: 50px;
+  fill: #15f5ba;
 }
 
 /* MAIN SCREEN */
